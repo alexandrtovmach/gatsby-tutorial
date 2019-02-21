@@ -1,12 +1,9 @@
 import React from "react"
 
-import Header from "../components/header";
-import Sidebar from "../components/sidebar";
+import Layout from "../components/layout"
 
 export default () => (
-  <div>
-    <Header />
-    <Sidebar />
+  <Layout>
     <h1>Index page</h1>
-  </div>
+  </Layout>
 )
