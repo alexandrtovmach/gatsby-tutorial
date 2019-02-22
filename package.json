@@ -13,9 +13,12 @@
   },
   "dependencies": {
     "gatsby": "^2.1.5",
+    "gatsby-plugin-typography": "^2.2.7",
     "gatsby-source-filesystem": "^2.0.22",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "react-typography": "^0.16.18",
+    "typography": "^0.16.18"
   },
   "repository": {
     "type": "git",
