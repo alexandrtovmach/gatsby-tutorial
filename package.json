@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "gatsby": "^2.1.5",
+    "gatsby-source-filesystem": "^2.0.22",
     "react": "^16.8.2",
     "react-dom": "^16.8.2"
   },
