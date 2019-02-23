@@ -7,6 +7,8 @@ import { colors } from "../utils/vars"
 const Header = styled.header`
   width: 100%;
   height: 3em;
+  position: fixed;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
