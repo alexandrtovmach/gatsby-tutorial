@@ -7,7 +7,12 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       }
     },
-    `gatsby-plugin-typography`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
   ],
