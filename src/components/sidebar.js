@@ -82,7 +82,7 @@ export default () => (
               orderNumber
             }
           }) => (
-            <Link to={link} key={link} css={navItem}>{orderNumber}. {title}</Link>
+            <Link to={link} key={link} css={navItem}>{orderNumber >= 0? `${orderNumber}. `: ``}{title}</Link>
           ))
         }
       </Sidebar>

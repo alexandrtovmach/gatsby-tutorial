@@ -11,19 +11,12 @@ const Main = styled.main`
   justify-content: center;
 `
 
-const Article = styled.article`
-  max-width: 650px;
-  margin-top: 5em;
-`
-
 export default ({ children }) => (
   <>
     <Header />
     <Sidebar />
     <Main>
-      <Article>
-        {children}
-      </Article>
+      {children}
     </Main>
   </>
 )

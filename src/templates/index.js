@@ -1,8 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
+
+const Article = styled.article`
+  max-width: 850px;
+  width: 60%;
+  margin-top: 5em;
+`
 
 export default ({
   data: {
@@ -26,7 +33,7 @@ export default ({
         <meta charSet="utf-8" />
         <title>{title}</title>
       </Helmet>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Article dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
