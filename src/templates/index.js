@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
+
 import Layout from "../components/layout"
 
 export default ({
@@ -7,6 +9,7 @@ export default ({
     allContentfulArticle: {
       edges: [{
         node: {
+          title,
           content: {
             childMarkdownRemark: {
               html
@@ -19,6 +22,10 @@ export default ({
 }) => {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{title}</title>
+      </Helmet>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
