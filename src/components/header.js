@@ -17,15 +17,29 @@ const Header = styled.header`
   padding: 0.5em
 `
 
-const Logo = styled.img`
-  border-radius: 50%;
-  height: 100%;
-`
-const logoLink = `
-  height: 100%;
+const langLink = `
+  margin-left: 0.5em;
+  color: inherit;
+  opacity: 0.8;
+  transition: 0.2s;
+  font-size: 90%;
+  
+  &:hover {
+    opacity: 1;
+  }
 `
 
-export default () => (
+const NameLink = styled.a`
+  color: inherit;
+  margin-right: 0.5em;
+`
+
+const Quote = styled.span`
+  opacity: 0.8;
+  font-size: 90%;
+`
+
+export default ({ text }) => (
   <StaticQuery
     query={graphql`
       {
@@ -48,10 +62,22 @@ export default () => (
       }
     }) => (
       <Header>
-        That's header
-        <Link to="/" css={logoLink} >
-          <Logo src={publicURL} alt="logo" />
-        </Link>
+        <div>
+          <NameLink href="https://twitter.com/alexandrtovmach" target="_blank">
+            @alexandrtovmach: 
+          </NameLink>
+          <Quote>
+            {text || 'Nothing special, only header'}
+          </Quote>
+        </div>
+        <div>
+          <Link to="/ru" css={langLink} >
+            RU
+          </Link>
+          <Link to="/ua" css={langLink} >
+            UA
+          </Link>
+        </div>
       </Header>
     )}
   />

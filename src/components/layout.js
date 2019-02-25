@@ -11,9 +11,9 @@ const Main = styled.main`
   justify-content: center;
 `
 
-export default ({ children }) => (
+export default ({ children, headerText }) => (
   <>
-    <Header />
+    <Header text={headerText} />
     <Sidebar />
     <Main>
       {children}

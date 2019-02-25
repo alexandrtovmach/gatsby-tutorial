@@ -16,6 +16,7 @@ export default ({
     allContentfulArticle: {
       edges: [{
         node: {
+          headerText,
           title,
           content: {
             childMarkdownRemark: {
@@ -28,7 +29,7 @@ export default ({
   }
 }) => {
   return (
-    <Layout>
+    <Layout headerText={headerText} >
       <Helmet>
         <meta charSet="utf-8" />
         <title>{title}</title>
@@ -43,6 +44,7 @@ export const query = graphql`
     allContentfulArticle(filter: { link: { eq: $slug }}) {
       edges {
         node {
+          headerText,
           title,
           link,
           content {
