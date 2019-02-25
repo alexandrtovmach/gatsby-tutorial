@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { colors } from "../utils/vars"
@@ -40,45 +40,22 @@ const Quote = styled.span`
 `
 
 export default ({ text }) => (
-  <StaticQuery
-    query={graphql`
-      {
-        allFile(filter: { name: { eq: "logo" } }) {
-          edges {
-            node {
-              publicURL
-            }
-          }
-        }
-      }
-    `}
-    render={({
-      allFile: {
-        edges: [{
-          node: {
-            publicURL
-          }
-        }]
-      }
-    }) => (
-      <Header>
-        <div>
-          <NameLink href="https://twitter.com/alexandrtovmach" target="_blank">
-            @alexandrtovmach: 
-          </NameLink>
-          <Quote>
-            {text || 'Nothing special, only header'}
-          </Quote>
-        </div>
-        <div>
-          <Link to="/ru" css={langLink} >
-            RU
-          </Link>
-          <Link to="/ua" css={langLink} >
-            UA
-          </Link>
-        </div>
-      </Header>
-    )}
-  />
+  <Header>
+    <div>
+      <NameLink href="https://twitter.com/alexandrtovmach" target="_blank">
+        @alexandrtovmach: 
+      </NameLink>
+      <Quote>
+        {text || 'Nothing special, only header'}
+      </Quote>
+    </div>
+    <div>
+      <Link to="/ru" css={langLink} >
+        RU
+      </Link>
+      <Link to="/ua" css={langLink} >
+        UA
+      </Link>
+    </div>
+  </Header>
 )
