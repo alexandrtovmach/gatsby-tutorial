@@ -16,6 +16,7 @@
     "dotenv": "^6.2.0",
     "gatsby": "^2.1.5",
     "gatsby-plugin-manifest": "^2.0.19",
+    "gatsby-plugin-netlify": "^2.0.11",
     "gatsby-plugin-offline": "^2.0.24",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sass": "^2.0.10",
