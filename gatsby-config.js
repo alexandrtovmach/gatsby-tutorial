@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 if (process.env.NODE_ENV === "development") {
   require("dotenv").config();
 }
@@ -13,7 +15,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `public/favicon.ico`,
+        icon: path.resolve(`./public/favicon.ico`),
         include_favicon: true,
       },
     },
