@@ -18,34 +18,42 @@
 
 <details>
   <summary>Установка Gatsby на ПК</summary>
-```bash
-yarn global add gatsby-cli
-```
+
+  ```bash
+  yarn global add gatsby-cli
+  ```
+
 </details>
 
 <details>
   <summary>Клонирование минимального проекта</summary>
-```bash
-npx gatsby new gatsby-tutorial https://github.com/gatsbyjs/gatsby-starter-hello-world
-cd gatsby-tutorial
-```
+
+  ```bash
+  npx gatsby new gatsby-tutorial https://github.com/gatsbyjs/gatsby-starter-hello-world
+  cd gatsby-tutorial
+  ```
+
 </details>
 
 <details>
   <summary>Инициализация репозитория</summary>
+
   ```bash
   git init
   git add .
   git commit -m "init commit"
   ```
+
 </details>
 
 <details>
   <summary>Проверка работоспособности</summary>
+
   ```
   yarn start
   ```
   Если в консоли нет ошибок, а в браузере по пути [http://localhost:8000](http://localhost:8000) виднеется "Hello world!" значит всё работает исправно. Можно попробовать изменить содержимое файла _/src/pages/index.js_, чтобы проверить hot-reload. 
+
 </details>
 
 ## Структура страниц и роутинг
@@ -252,6 +260,7 @@ export default () => (
 
 <details>
   <summary>Структура файлов</summary>
+
   ```
   src
   ├── components
@@ -274,6 +283,7 @@ export default () => (
           ├── part-two.js
           └── part-zero.js
   ```
+
 </details>
 
 ## Работа с данными
@@ -357,6 +367,7 @@ module.exports = {
 
 <details>
   <summary>Детальнее про файл выше</summary>
+
   ```js
   /**
    * gatsby-config.js это файл который должен
@@ -384,6 +395,7 @@ module.exports = {
     ],
   }
   ```
+
 </details>
 
 Помните мы говорили про "правильный" импорт картинок в **Gatsby**?
@@ -535,6 +547,7 @@ export const colors = {
 
 <details>
   <summary>/src/components/header.js</summary>
+
   ```js
   import React from "react";
   import { Link, StaticQuery, graphql } from "gatsby";
@@ -591,10 +604,12 @@ export const colors = {
     />
   );
   ```
+
 </details>
 
 <details>
   <summary>/src/components/sidebar.js</summary>
+
   ```js
   import React from "react"
   import { Link, StaticQuery, graphql } from "gatsby"
@@ -684,6 +699,7 @@ export const colors = {
 
   )
   ```
+
 </details>
 
 ![styled](http://d.zaix.ru/aUSM.gif)
@@ -694,6 +710,7 @@ export const colors = {
 
 <details>
   <summary>Структура моих данных с Contentful</summary>
+
   ```js
   [
     {
@@ -714,6 +731,7 @@ export const colors = {
     }
   ]
   ```
+
 </details>
 
 Установка пакетов:
@@ -866,6 +884,7 @@ export const query = graphql`
 
 <details>
   <summary>Обновляем логику в навигационной панели</summary>
+
   ```js
   import React from "react";
   import { Link, StaticQuery, graphql } from "gatsby";
@@ -947,6 +966,7 @@ export const query = graphql`
     />
   );
   ```
+
 </details>
 
 ![data](http://d.zaix.ru/aUZw.gif)
