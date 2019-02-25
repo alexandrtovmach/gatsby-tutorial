@@ -50,7 +50,7 @@ const navItem = `
   }
 `
 
-export default () => (
+export default ({ locale }) => (
   <StaticQuery
     query={graphql`
       {
@@ -62,6 +62,7 @@ export default () => (
             node {
               title,
               link,
+              lang,
               orderNumber
             }
           }
@@ -79,10 +80,12 @@ export default () => (
             node: {
               title,
               link,
+              lang,
               orderNumber
             }
           }) => (
-            <Link to={link} key={link} css={navItem}>{orderNumber >= 0? `${orderNumber}. `: ``}{title}</Link>
+            locale === lang &&
+            <Link to={`${locale}${link}`} key={link} css={navItem}>{orderNumber >= 0? `${orderNumber}. `: ``}{title}</Link>
           ))
         }
       </Sidebar>

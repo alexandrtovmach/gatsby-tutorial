@@ -11,10 +11,10 @@ const Main = styled.main`
   justify-content: center;
 `
 
-export default ({ children, headerText }) => (
+export default ({ children, headerText, lang }) => (
   <>
     <Header text={headerText} />
-    <Sidebar />
+    <Sidebar locale={lang} />
     <Main>
       {children}
     </Main>

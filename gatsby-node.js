@@ -9,6 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             title,
             link,
+            lang,
             content {
               childMarkdownRemark {
                 html
@@ -26,11 +27,24 @@ exports.createPages = ({ graphql, actions }) => {
     }
   }) => {
     edges.forEach(({ node }) => {
+
+      if (node.lang === `ru` && node.link === `/`) {
+        createPage({
+          path: node.link,
+          component: path.resolve(`./src/templates/index.js`),
+          context: {
+            slug: node.link,
+            lang: node.lang,
+          },
+        })
+      }
+
       createPage({
-        path: node.link,
+        path: `${node.lang}${node.link || ""}`,
         component: path.resolve(`./src/templates/index.js`),
         context: {
-          slug: node.link
+          slug: node.link || "",
+          lang: node.lang || "ru"
         },
       })
     })
