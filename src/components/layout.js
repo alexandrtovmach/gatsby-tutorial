@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     align-items: center;
 
     &:before {
-      content: "Support this view will coming"
+      content: "Resolution support is in progress"
     }
 
     > * {
