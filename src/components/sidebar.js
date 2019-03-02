@@ -77,13 +77,11 @@ const GatsbyLogoLink = styled.a`
 `
 
 const AboutSection = styled.div`
-  display: flex;
-  align-items: center;
   width: 100%;
   font-size: 70%;
   padding: 1em 2.5em;
 
-  > a {
+  a {
     color: inherit;
     margin-left: 0.3em;
   }
@@ -166,6 +164,7 @@ class SidebarComponent extends React.Component {
           }
         </div>
         <AboutSection>
+          <div>This project on <a href="https://github.com/alexandrtovmach/gatsby-tutorial" target="_blank" rel="noopener noreferrer">GitHub</a></div>
           Translated by <a href="https://alexandrtovmach.com" target="_blank" rel="noopener noreferrer">Alexandr Tovmach</a>
         </AboutSection>
       </Sidebar>
