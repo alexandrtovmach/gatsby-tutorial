@@ -6,9 +6,9 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 
 const Article = styled.article`
-  max-width: 850px;
-  width: 60%;
-  margin-top: 5em;
+  max-width: 36.4rem;
+  width: 100%;
+  padding: 0 1em;
 `
 
 export default ({
