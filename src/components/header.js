@@ -2,11 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { colors } from "../utils/vars"
+import { colors, queryPoints } from "../utils/vars"
 
 const Header = styled.header`
   width: 100%;
-  height: 3em;
   position: fixed;
   z-index: 2;
   display: flex;
@@ -14,7 +13,11 @@ const Header = styled.header`
   align-items: center;
   background-color: ${colors.main};
   color: ${colors.textSecond};
-  padding: 0.5em
+  padding: 0.5em;
+  
+  @media screen and (max-width: ${queryPoints.small}) {
+    font-size: 100%;
+  }
 `
 
 const langLink = `
