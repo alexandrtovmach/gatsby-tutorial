@@ -67,6 +67,11 @@ const navItem = `
       transform: scale(1);
     }
   }
+
+  @media screen and (max-width: ${queryPoints.mid}) {
+    margin-left: 0;
+    padding-left: 1em;
+  }
 `
 
 const GatsbyLogoLink = styled.a`
@@ -84,6 +89,11 @@ const AboutSection = styled.div`
   a {
     color: inherit;
     margin-left: 0.3em;
+  }
+
+  @media screen and (max-width: ${queryPoints.mid}) {
+    margin-left: 0;
+    padding-left: 1em;
   }
 `
 
