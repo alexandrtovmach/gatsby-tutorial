@@ -8,3 +8,9 @@ export const colors = {
   textSecond: `#ffffff`,
   textBody: `#222222`,
 }
+
+export const queryPoints = {
+  pc: "1000px",
+  mid: "750px",
+  small: "480px"
+}
