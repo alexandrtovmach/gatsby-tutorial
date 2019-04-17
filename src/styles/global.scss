@@ -2,6 +2,23 @@ body {
   font-size: 0.9em;
 }
 
+a {
+  color: #8c65b3;
+  text-decoration: none;
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid #8c65b3;
+
+  &:hover {
+    border-bottom-color: #F1DEFA;
+  }
+}
+
+blockquote {
+  border-left: 0.25rem solid #F6EDFA;
+  padding-left: 1.5rem!important;
+  margin-left: 0!important;
+}
+
 .gatsby-highlight {
   background-color: rgb(253, 250, 246);
   border-radius: 0.3em;
