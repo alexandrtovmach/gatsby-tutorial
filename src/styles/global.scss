@@ -26,6 +26,7 @@ blockquote {
 tt, code, kbd {
   background: #fbf2e9!important;
   padding: 0.2em!important;
+  word-break: break-word!important;
 }
 
 .gatsby-highlight {
@@ -42,5 +43,4 @@ tt, code, kbd {
   padding: 0;
   overflow: initial;
   min-width: 100%; /* 2 */
-  word-break: break-word;
 }
