@@ -72,7 +72,7 @@ const navItem = `
     margin-left: 0;
     padding-left: 1em;
     &:before {
-      display: block;
+      display: none;
     }
   }
 `
