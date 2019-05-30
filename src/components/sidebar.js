@@ -71,6 +71,9 @@ const navItem = `
   @media screen and (max-width: ${queryPoints.mid}) {
     margin-left: 0;
     padding-left: 1em;
+    &:before {
+      display: block;
+    }
   }
 `
 
