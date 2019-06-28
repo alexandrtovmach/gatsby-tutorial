@@ -1,2 +1,3 @@
-import "prismjs/themes/prism.css"
-import "./src/styles/global.scss"
+import wrapRoot from "./wrap-root-element"
+
+export const wrapRootElement = wrapRoot
